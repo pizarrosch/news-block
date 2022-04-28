@@ -3,7 +3,7 @@ body {
 }
 
 .dark {
-  background-color: darkgray;
+  background-color: #262626;
 }
 
 
@@ -25,10 +25,17 @@ body {
   border: none;
   display: none;
   cursor: pointer;
-  width: 30px;
-  height: 33px;
-  fill: #6e62b7;
+  width: 35px;
+  height: 35px;
+  color: yellow;
 }
+
+.select {
+  display: flex;
+  flex-direction: column;
+  padding: 10px 5px;
+}
+
 
 .news-list {
   display: grid;
@@ -54,6 +61,10 @@ body {
   box-shadow:
     rgba(0, 0, 0, 0.16) 0 10px 36px 0,
     rgba(0, 0, 0, 0.06) 0 0 0 1px;
+}
+
+.dark .news-list div {
+  background-color: #ffffffd6;
 }
 
 .news-list div img {

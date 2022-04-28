@@ -20,13 +20,13 @@ const topicsData = [
   {
     // content: 'Exploring new worlds enriches your inner world',
     topic: 'Travelling',
-    image: 'images/HikingDayontheTrails-GettyImages-1049524114.jpg',
+    image: 'images/deanna-ritchie-worturlz7jg-unsplash.jpg',
     alt: 'travel'
   },
   {
     // content: 'These recipes you have surely never tested...',
     topic: 'Food',
-    image: 'images/HikingDayontheTrails-GettyImages-1049524114.jpg',
+    image: 'images/french-food-1920x1080.jpg',
     alt: 'food'
   }
 ];
