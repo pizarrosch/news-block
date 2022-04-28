@@ -1,5 +1,43 @@
-.theme-button img {
+.dark {
+  background-color: darkgray;
+}
+
+
+.theme-button {
   position: fixed;
   right: 40px;
   top: 20px;
+  border: none;
+  cursor: pointer;
+  width: 35px;
+  height: 35px;
+}
+
+
+.theme-button img:last-child {
+  position: fixed;
+  right: 40px;
+  top: 20px;
+  border: none;
+  display: none;
+  cursor: pointer;
+  width: 30px;
+  height: 33px;
+}
+
+.news-list {
+  display: grid;
+  /*flex-direction: column;*/
+  gap: 2rem;
+  grid-template-columns: 1fr 1fr;
+  width: 70%;
+  margin: 150px auto;
+
+}
+
+.news-list div {
+
+  padding: 10px 20px;
+  border-radius: 8px;
+  background-color: lightgray;
 }

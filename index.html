@@ -4,9 +4,33 @@
   <meta charset="UTF-8">
   <title>News-block</title>
   <link rel="stylesheet" href="news-block.css">
-  <script src="news-block.js"></script>
+  <script src="utils.js" defer></script>
+  <script src="news-block.js" defer></script>
+
 </head>
 <body>
-  <div class="theme-button"><img src="images/icons8-sun.svg" alt="the sun" width="35" height="35"></div>
+<div class="theme-button">
+  <img src="images/icons8-sun.svg" width="35" height="35" alt="sun">
+  <img src="images/crescent-moon.svg" alt="crescent-moon" width="30" height="30">
+</div>
+
+<select class="select">
+  <option hidden>Choose your topic</option>
+  <option value="Books">Books</option>
+  <option value="Animals">Animals</option>
+  <option value="Hiking">Hiking</option>
+  <option value="Travelling">Travelling</option>
+  <option value="Food">Food</option>
+  <option value="all-topics">All topics</option>
+</select>
+
+
+<div class="news-list">
+  <div data-topic="Books">So, the story began a long time ago...</div>
+  <div data-topic="Animals">The more time you spend with your beloved pet, the more you laugh. Or maybe not...</div>
+  <div data-topic="Hiking">What can you do if it is raining outside?</div>
+  <div data-topic="Travelling">Exploring new worlds enriches your inner world</div>
+  <div data-topic="Food">These recipes you have surely never tested...</div>
+</div>
 </body>
 </html>
