@@ -1,18 +1,25 @@
-const html = $('html');
-const themeButton = $('.theme-button');
-const darkButton = $('.theme-button img:last-child');
-const lightButton = $('.theme-button img:first-child');
+function createNewsBlock(topic) {
+  // Create HTML elements
+  const div = document.createElement('div');
+  const img = document.createElement('img');
+  const p = document.createElement('p');
 
+  // Add src attribute to img element
+  img.src = topic.image;
+  img.alt = topic.alt;
 
-themeButton.onclick = () => {
-  html.classList.toggle('dark');
+  // Insert
+  p.textContent = topic.topic;
 
-  if (html.classList.contains('dark')) {
-    lightButton.style.display = 'none';
-    darkButton.style.display = 'block';
-  } else {
-    lightButton.style.display = 'block';
-    darkButton.style.display = 'none';
-  }
+  div.append(img);
+  div.append(p);
+
+  newsContainer.append(div);
 }
 
+
+const newsContainer = $('.news-list');
+
+for (const topic of topicsData) {
+  createNewsBlock(topic);
+}
