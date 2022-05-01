@@ -3,7 +3,8 @@ const topicsData = [
     // content: 'So, the story began a long time ago...',
     topic: 'Books',
     image: 'images/photo-1553729784-e91953dec042.jpg',
-    alt: 'reading-woman'
+    alt: 'reading-woman',
+    location: 'http://localhost:63342/news-block/Books%20sub.html?_ijt=6ph7bu69lkjtb7c5483jkuhgee&_ij_reload=RELOAD_ON_SAVE',
   },
   {
     // content: 'The more time you spend with your beloved pet, the more you laugh. Or maybe not...',
@@ -28,49 +29,49 @@ const topicsData = [
     topic: 'Food',
     image: 'images/french-food-1920x1080.jpg',
     alt: 'food'
-  }
+  },
 ];
 
 const subcategoryData  = [
   {
-    topic: 'books',
+    category: 'Books',
     title: "Arthur Conan Doyle 'Adventures of Sherlock Holmes'",
-    genre: 'detective story'
+    genre: 'detective story',
   },
   {
-    topic: 'books',
+    category: 'Books',
     title: "Ernest Hemingway 'The old man and the sea'",
     genre: 'novel'
   },
   {
-    topic: 'books',
+    category: 'Books',
     title: "Agatha Christie 'The mysterious affair at Styles'",
     genre: 'detective story'
   },
   {
-    topic: 'books',
+    category: 'Books',
     title: "Charles Dickens 'Bleak house'",
     genre: 'novel'
   },
   {
-    topic: 'books',
+    category: 'Books',
     title: "John Steinbeck 'Of mice and men'",
     genre: 'novella'
   },
   {
-    topic: 'books',
+    category: 'Books',
     title: "George Orwell 'Animal farm'",
     genre: 'novella'
   },
   {
-    topic: 'books',
+    category: 'Books',
     title: "Charles Dickens 'A Christmas carol'",
     genre: 'novella'
   },
   {
-    topic: 'books',
+    category: 'Books',
     title: "Edgar Allan Poe 'The murders in the Rue Morgue'",
     genre: 'detective story'
   },
 
-]
+];

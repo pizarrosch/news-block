@@ -1,9 +1,11 @@
 function createNewsBlock(topic) {
   // Create HTML elements
   const div = document.createElement('div');
+  div.classList.add('newsValue');
   const img = document.createElement('img');
   const p = document.createElement('p');
-  const divs = $$('.news-list div');
+  const divs = $$('.newsValue');
+
 
   // Add src attribute to img element
   img.src = topic.image;
@@ -17,8 +19,10 @@ function createNewsBlock(topic) {
 
   newsContainer.append(div);
 
-  div.onclick = () => {
-    location.href = 'http://localhost:63342/news-block/Books%20sub.html?_ijt=6ph7bu69lkjtb7c5483jkuhgee&_ij_reload=RELOAD_ON_SAVE';
+  for(const div of divs) {
+    div.onclick = () => {
+      location.href = 'http://localhost:63342/news-block/Books%20sub.html?_ijt=8mee9376sogvg19nuilctu021k&_ij_reload=RELOAD_ON_SAVE';
+    }
   }
 }
 
