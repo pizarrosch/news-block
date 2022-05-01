@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>News-block</title>
+  <title>Books sub</title>
   <link rel="stylesheet" href="news-block.css">
   <script src="utils.js" defer></script>
   <script src="js/theming.js" defer></script>
@@ -19,8 +19,17 @@
   <img src="images/clear_night.svg" alt="crescent-moon" width="30" height="30">
 </div>
 
-<div class="news-list"></div>
+<select class="select">
+  <option hidden>Choose your topic</option>
+  <option value="Books">Books</option>
+  <option value="Animals">Animals</option>
+  <option value="Hiking">Hiking</option>
+  <option value="Travelling">Travelling</option>
+  <option value="Food">Food</option>
+  <option value="all-topics">All topics</option>
+</select>
 
+<div class="subcategories"></div>
 
 </body>
 </html>

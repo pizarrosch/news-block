@@ -6,6 +6,9 @@ body {
   background-color: #262626;
 }
 
+.hidden {
+  display: none;
+}
 
 .theme-button {
   position: fixed;
@@ -47,6 +50,7 @@ body {
 
 }
 
+
 .news-list div {
   border-radius: 8px;
   background-color: #e4e4e475;
@@ -57,10 +61,16 @@ body {
     rgba(0, 0, 0, 0.08) 0 0 0 1px;
 }
 
+.dark .news-list div:hover {
+  box-shadow:
+    rgba(255, 255, 255, 0.26) 0 10px 36px 0,
+    rgba(255, 255, 255, 0.06) 0 0 0 1px;
+}
+
 .news-list div:hover {
   box-shadow:
     rgba(0, 0, 0, 0.16) 0 10px 36px 0,
-    rgba(0, 0, 0, 0.06) 0 0 0 1px;
+    rgba(0, 0, 0, 0.16) 0 0 0 1px;
 }
 
 .dark .news-list div {
@@ -77,4 +87,31 @@ body {
 .news-list p {
   padding: 17px;
   margin: 0;
+}
+
+.subcategories {
+  display: grid;
+  width: 70%;
+  margin: 150px auto;
+}
+
+/*.shown {*/
+/*  display: grid;*/
+/*  margin: -703px 0 0 225px;*/
+/*}*/
+
+.subcategories div {
+  border-radius: 8px;
+  box-shadow:
+    rgba(0, 0, 0, 0.05) 0 6px 24px 0,
+    rgba(0, 0, 0, 0.08) 0 0 0 1px;
+  cursor: pointer;
+  padding: 5px 50px 5px 50px;
+  transition: 0.2s;
+}
+
+.subcategories div:hover {
+  box-shadow:
+    rgba(0, 0, 0, 0.16) 0 10px 36px 0,
+    rgba(0, 0, 0, 0.16) 0 0 0 1px;
 }
