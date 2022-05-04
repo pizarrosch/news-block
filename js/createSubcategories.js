@@ -9,14 +9,31 @@ function createSubcategories(categoryId) {
   }
 }
 
-$('#select').change(function() {
-  if (this.value === 'all-genres') {
-    $(`.book`).css('display', 'block');
-    return;
+$('#select').change(function () {
+  const filter = this;
+
+  for (const div of $('.book')) {
+    // Wrap a plain JS object into jQuery object
+    const $item = $(div);
+
+    // If the select value equals the current item's genre-id OR equals 'all-genres'
+    // then make it visible.
+    if ($item.data('genreId') === filter.value || filter.value === 'all-genres') {
+      $item.css('display', 'block');
+    } else {
+      $item.css('display', 'none');
+    }
   }
 
-  $(`.book:not([data-genre-id="${this.value}"])`).css('display', 'none');
-  $(`.book[data-genre-id="${this.value}"]`).css('display', 'block');
+  // Option #2
+  // $('.book').each(function(i, div) {
+  //     const $this = $(div);
+  //     if ($this.data('genreId') === filter.value) {
+  //       $this.css('display', 'block');
+  //     } else {
+  //       $this.css('display', 'none');
+  //     }
+  // });
 })
 
 const subcategoriesContainer = $('.subcategories');
@@ -29,7 +46,7 @@ function createBooksList() {
       </div>
     `)
   }
- }
+}
 
 
 function createAnimalsList() {
