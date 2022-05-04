@@ -35,4 +35,8 @@ filter.onchange = () => {
  }
 }
 
+const returnButton = $('.return-button');
 
+returnButton.onclick = () => {
+  location.href = "http://localhost:63342/news-block/index.html?_ijt=1fb797h1nkvr10mjdbp51dk3na&_ij_reload=RELOAD_ON_SAVE";
+}
