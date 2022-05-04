@@ -1,25 +1,25 @@
-function createNewBlock(subdivision) {
-  const div = create('div');
-  div.classList.add('book');
-  const p = create('p');
-  const a = create('a');
-
-  a.href = subdivision.location;
-
-  p.textContent = subdivision.title;
-  div.value = subdivision.category;
-  div.dataset.category = subdivision.genre;
-
-  div.append(p);
-
-  subcategories.append(div);
-}
-
-const subcategories = $('.subcategories');
-
-for (const subdivision of subcategoryData) {
-  createNewBlock(subdivision);
-}
+// function createNewBlock(item) {
+//   const div = create('div');
+//   div.classList.add('book');
+//   const p = create('p');
+//   const a = create('a');
+//
+//   a.href = item.location;
+//
+//   p.textContent = item.title;
+//   // div.value = item.category;
+//   div.dataset.category = item.genre;
+//
+//   div.append(p);
+//
+//   subcategories.append(div);
+// }
+//
+// const subcategories = $('.subcategories');
+//
+// for (const subdivision of subcategoryData) {
+//   createNewBlock(subdivision);
+// }
 
 const divs = $$('.book');
 const filter = $('.select');
@@ -35,8 +35,8 @@ filter.onchange = () => {
  }
 }
 
-const returnButton = $('.return-button');
+// const returnButton = $('.return-button');
 
-returnButton.onclick = () => {
-  location.href = "http://localhost:63342/news-block/index.html?_ijt=1fb797h1nkvr10mjdbp51dk3na&_ij_reload=RELOAD_ON_SAVE";
-}
+// returnButton.onclick = () => {
+//   location.href = "http://localhost:63342/news-block/index.html?_ijt=1fb797h1nkvr10mjdbp51dk3na&_ij_reload=RELOAD_ON_SAVE";
+// }
