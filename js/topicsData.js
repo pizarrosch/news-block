@@ -36,7 +36,7 @@ const subcategoryData  = [
     id: 0,
     category: 'Books',
     title: "Arthur Conan Doyle 'Adventures of Sherlock Holmes'",
-    genre: 'detective story',
+    genre: 'detective-story',
   },
   {
     id: 1,
@@ -48,7 +48,7 @@ const subcategoryData  = [
     id: 2,
     category: 'Books',
     title: "Agatha Christie 'The mysterious affair at Styles'",
-    genre: 'detective story'
+    genre: 'detective-story'
   },
   {
     id: 3,
@@ -78,7 +78,7 @@ const subcategoryData  = [
     id: 7,
     category: 'Books',
     title: "Edgar Allan Poe 'The murders in the Rue Morgue'",
-    genre: 'detective story'
+    genre: 'detective-story'
   },
 
 ];

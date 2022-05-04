@@ -22,18 +22,18 @@
 // }
 
 const divs = $$('.book');
-const filter = $('.select');
 
 
-filter.onchange = () => {
-  for (const div of divs) {
-  if(div.dataset.category !== filter.value && filter.value !== 'all-genres') {
-    div.classList.add('hidden');
-  } else {
-    div.classList.remove('hidden');
-  }
- }
-}
+
+// filter.onchange = () => {
+//   for (const div of divs) {
+//   if(div.dataset.category !== filter.value && filter.value !== 'all-genres') {
+//     div.classList.add('hidden');
+//   } else {
+//     div.classList.remove('hidden');
+//   }
+//  }
+// }
 
 // const returnButton = $('.return-button');
 

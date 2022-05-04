@@ -9,17 +9,28 @@ function createSubcategories(categoryId) {
   }
 }
 
+$('#select').change(function() {
+  if (this.value === 'all-genres') {
+    $(`.book`).css('display', 'block');
+    return;
+  }
+
+  $(`.book:not([data-genre-id="${this.value}"])`).css('display', 'none');
+  $(`.book[data-genre-id="${this.value}"]`).css('display', 'block');
+})
+
 const subcategoriesContainer = $('.subcategories');
 
 function createBooksList() {
   for (const item of subcategoryData) {
     subcategoriesContainer.append(`
-      <div class="book" data-id="${item.id}">
+      <div class="book" data-genre-id="${item.genre}">
         <p>${item.title}</p>
       </div>
     `)
   }
-}
+ }
+
 
 function createAnimalsList() {
 
