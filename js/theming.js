@@ -1,9 +1,9 @@
 function hideElement(element) {
-  element.style.display = 'none';
+  element.css('display', 'none');
 }
 
 function showElement(element) {
-  element.style.display = 'block';
+  element.css('display', 'block');
 }
 
 const html = $('html');
@@ -11,14 +11,14 @@ const themeButton = $('.theme-button');
 const darkButton = $('.theme-button img:last-child');
 const lightButton = $('.theme-button img:first-child');
 
-themeButton.onclick = () => {
-  html.classList.toggle('dark');
+themeButton.click(() => {
+  html.toggleClass('dark');
 
-  if (html.classList.contains('dark')) {
+  if (html.hasClass('dark')) {
     hideElement(lightButton);
     showElement(darkButton);
   } else {
     showElement(lightButton);
     hideElement(darkButton);
   }
-}
+});
