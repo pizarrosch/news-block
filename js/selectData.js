@@ -1,18 +1,22 @@
 const selectData = [
   {
     id: 0,
-    value: 'detective-story'
+    value: 'detective-story',
+    content: 'Detective story'
   },
   {
     id: 1,
-    value: 'novel'
+    value: 'novel',
+    content: 'Novel'
   },
   {
     id: 2,
-    value: 'novella'
+    value: 'novella',
+    content: 'Novella'
   },
   {
     id: 3,
-    value: 'all-genres'
+    value: 'all-genres',
+    content: 'Show all'
   }
 ];

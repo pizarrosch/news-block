@@ -79,6 +79,5 @@ const subcategoryData  = [
     category: 'Books',
     title: "Edgar Allan Poe 'The murders in the Rue Morgue'",
     genre: 'detective-story'
-  },
-
+  }
 ];

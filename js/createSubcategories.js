@@ -45,12 +45,12 @@ function createSubcategories(categoryId) {
 
     const $li = $(`
       <li class="select-list" data-value="${list.value}">
-         <p>${list.value}</p>
+         <p>${list.content}</p>
       </li>
   `)
 
     $li.click(function () {
-      console.log('bla')
+
       for (const div of $('.book')) {
         // Wrap a plain JS object into jQuery object
         const $item = $(div);
@@ -63,6 +63,8 @@ function createSubcategories(categoryId) {
           $item.css('display', 'none');
         }
       }
+      $('.choose').text(list.content);
+      filter.css('display', 'none');
     });
 
     filter.append($li);

@@ -21,17 +21,17 @@ function createNewsBlock(topic) {
   });
 
   $('.choose').click(() => {
-
-    filter.toggleClass('shown');
-
-    if(filter.hasClass('shown')) {
-      filter.css('display', 'inline-grid');
-    } else {
-      filter.css('display', 'none');
-    }
-
+    filter.toggle();
   })
 }
+
+$(window).click((event) => {
+  if ($(event.target).is('.choose')) {
+    return;
+  }
+
+  filter.css('display', 'none');
+})
 
 for (const topic of topicsData) {
   createNewsBlock(topic);
