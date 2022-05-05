@@ -33,10 +33,34 @@ body {
   color: yellow;
 }
 
+.choose {
+  display: none;
+  border: 1px grey solid;
+  width: 200px;
+  text-align: center;
+  padding: 10px 0 10px 0;
+  background-color: #484649;
+  color: lightgray;
+  cursor: pointer;
+  user-select: none;
+}
+
 #select {
-  display: flex;
+  display: none;
   flex-direction: column;
-  padding: 10px 5px;
+  /*padding: 10px 5px;*/
+  width: 200px;
+  text-align: center;
+  background-color: #484649;
+  color: lightgray;
+  position: absolute;
+}
+
+
+.select-list {
+  list-style: none;
+  cursor: pointer;
+  user-select: none;
 }
 
 .news-list {
@@ -45,10 +69,13 @@ body {
   gap: 2rem;
   grid-template-columns: 1fr 1fr 1fr;
   width: 70%;
-  margin: 150px auto;
+  margin: 160px auto;
 
 }
 
+/*.news-list.shown {*/
+/*  margin: 10px auto;*/
+/*}*/
 
 .news-list div {
   border-radius: 8px;
@@ -91,7 +118,7 @@ body {
 .subcategories {
   display: grid;
   width: 70%;
-  margin: 150px auto;
+  margin: 170px auto;
   transition: 0.2s;
 }
 

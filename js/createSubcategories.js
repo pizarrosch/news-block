@@ -1,3 +1,5 @@
+
+
 function createSubcategories(categoryId) {
   switch (categoryId) {
     case 0:
@@ -9,22 +11,6 @@ function createSubcategories(categoryId) {
   }
 }
 
-$('#select').change(function () {
-  const filter = this;
-
-  for (const div of $('.book')) {
-    // Wrap a plain JS object into jQuery object
-    const $item = $(div);
-
-    // If the select value equals the current item's genre-id OR equals 'all-genres'
-    // then make it visible.
-    if ($item.data('genreId') === filter.value || filter.value === 'all-genres') {
-      $item.css('display', 'block');
-    } else {
-      $item.css('display', 'none');
-    }
-  }
-
   // Option #2
   // $('.book').each(function(i, div) {
   //     const $this = $(div);
@@ -34,21 +20,54 @@ $('#select').change(function () {
   //       $this.css('display', 'none');
   //     }
   // });
-})
+// })
 
-const subcategoriesContainer = $('.subcategories');
+  const subcategoriesContainer = $('.subcategories');
 
-function createBooksList() {
-  for (const item of subcategoryData) {
-    subcategoriesContainer.append(`
+  function createBooksList() {
+    for (const item of subcategoryData) {
+      subcategoriesContainer.append(`
       <div class="book" data-genre-id="${item.genre}">
         <p>${item.title}</p>
       </div>
     `)
+    }
   }
-}
 
 
-function createAnimalsList() {
+  function createAnimalsList() {
 
-}
+  }
+
+  const filter = $('#select');
+
+  function createSelectList(list) {
+
+    const $li = $(`
+      <li class="select-list" data-value="${list.value}">
+         <p>${list.value}</p>
+      </li>
+  `)
+
+    $li.click(function () {
+      console.log('bla')
+      for (const div of $('.book')) {
+        // Wrap a plain JS object into jQuery object
+        const $item = $(div);
+
+        // If the select value equals the current item's genre-id OR equals 'all-genres'
+        // then make it visible.
+        if ($item.data('genreId') === $li.data('value') || $li.data('value') === 'all-genres') {
+          $item.css('display', 'block');
+        } else {
+          $item.css('display', 'none');
+        }
+      }
+    });
+
+    filter.append($li);
+  }
+
+  for (const list of selectData) {
+    createSelectList(list);
+  }

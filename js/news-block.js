@@ -16,9 +16,21 @@ function createNewsBlock(topic) {
   $div.click(() => {
     // Clean the page
     $container.css('display', 'none');
-    $('#select').css('display', 'block');
+    $('.choose').css('display', 'block');
     createSubcategories($div.data('id'));
   });
+
+  $('.choose').click(() => {
+
+    filter.toggleClass('shown');
+
+    if(filter.hasClass('shown')) {
+      filter.css('display', 'inline-grid');
+    } else {
+      filter.css('display', 'none');
+    }
+
+  })
 }
 
 for (const topic of topicsData) {
