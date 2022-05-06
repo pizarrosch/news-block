@@ -36,7 +36,21 @@ function createSubcategories(categoryId) {
 
 
   function createAnimalsList() {
-
+    for(const animal of Animals) {
+      subcategoriesContainer.append(`
+        <div class="animals" data-species-id="${animal.species}">  
+          <h3>${animal.title}</h3>
+          
+            <img class="animals-image" src="${animal.image}" alt="${animal.alt}">
+          <span class="content">
+            <p>${animal.insight}</p>
+          
+          
+          <span class="look-button">Look here  ></span>
+          </span> 
+        </div> 
+      `)
+    }
   }
 
   const filter = $('#select');

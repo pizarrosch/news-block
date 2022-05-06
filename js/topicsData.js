@@ -81,3 +81,90 @@ const subcategoryData  = [
     genre: 'detective-story'
   }
 ];
+
+const Animals = [
+  {
+    id: 0,
+    category: 'Animals',
+    title: 'Lions return to zoo after Storm Eunice damage',
+    image: 'images/Lions.jpg',
+    insight: 'Zero, Mo, Tor, Kaya and Jabu, went on a 10-week holiday to Whipsnade from Africa Live in Suffolk.',
+    species: 'wild-animals',
+    alt: 'lion'
+  },
+  {
+    id: 0,
+    category: 'Animals',
+    title: 'Tiny Yorkie loses leg after venomous snake bite',
+    image: 'images/yorkie.jpg',
+    insight: 'Zero, Mo, Tor, Kaya and Jabu, went on a 10-week holiday to Whipsnade from Africa Live in Suffolk.',
+    species: 'dogs',
+    alt: 'small dog'
+  },
+  {
+    id: 0,
+    category: 'Animals',
+    title: 'Police appeal after 55 sheep stolen on Lewis',
+    image: 'images/sheep.jpg',
+    insight: 'Extensive searches have been made for the animals, but no trace of them has been found.',
+    species: 'cattle',
+    alt: 'sheep'
+  },
+  {
+    id: 0,
+    category: 'Animals',
+    title: 'Lions return to zoo after Storm Eunice damage',
+    image: 'images/Lions.jpg',
+    insight: 'Zero, Mo, Tor, Kaya and Jabu, went on a 10-week holiday to Whipsnade from Africa Live in Suffolk.'
+  },
+  {
+    id: 0,
+    category: 'Animals',
+    title: 'Lions return to zoo after Storm Eunice damage',
+    image: 'images/Lions.jpg',
+    insight: 'Zero, Mo, Tor, Kaya and Jabu, went on a 10-week holiday to Whipsnade from Africa Live in Suffolk.'
+  },
+  {
+    id: 0,
+    category: 'Animals',
+    title: 'Lions return to zoo after Storm Eunice damage',
+    image: 'images/Lions.jpg',
+    insight: 'Zero, Mo, Tor, Kaya and Jabu, went on a 10-week holiday to Whipsnade from Africa Live in Suffolk.'
+  },
+  {
+    id: 0,
+    category: 'Animals',
+    title: 'Lions return to zoo after Storm Eunice damage',
+    image: 'images/Lions.jpg',
+    insight: 'Zero, Mo, Tor, Kaya and Jabu, went on a 10-week holiday to Whipsnade from Africa Live in Suffolk.'
+  },
+  {
+    id: 0,
+    category: 'Animals',
+    title: 'Lions return to zoo after Storm Eunice damage',
+    image: 'images/Lions.jpg',
+    insight: 'Zero, Mo, Tor, Kaya and Jabu, went on a 10-week holiday to Whipsnade from Africa Live in Suffolk.'
+  },
+  {
+    id: 0,
+    category: 'Animals',
+    title: 'Lions return to zoo after Storm Eunice damage',
+    image: 'images/Lions.jpg',
+    insight: 'Zero, Mo, Tor, Kaya and Jabu, went on a 10-week holiday to Whipsnade from Africa Live in Suffolk.'
+  },
+  {
+    id: 0,
+    category: 'Animals',
+    title: 'Lions return to zoo after Storm Eunice damage',
+    image: 'images/Lions.jpg',
+    insight: 'Zero, Mo, Tor, Kaya and Jabu, went on a 10-week holiday to Whipsnade from Africa Live in Suffolk.'
+  },
+  {
+    id: 0,
+    category: 'Animals',
+    title: 'Lions return to zoo after Storm Eunice damage',
+    image: 'images/Lions.jpg',
+    insight: 'Zero, Mo, Tor, Kaya and Jabu, went on a 10-week holiday to Whipsnade from Africa Live in Suffolk.'
+  },
+
+]
