@@ -1,5 +1,3 @@
-
-
 function createSubcategories(categoryId) {
   switch (categoryId) {
     case 0:
@@ -11,79 +9,61 @@ function createSubcategories(categoryId) {
   }
 }
 
-  // Option #2
-  // $('.book').each(function(i, div) {
-  //     const $this = $(div);
-  //     if ($this.data('genreId') === filter.value) {
-  //       $this.css('display', 'block');
-  //     } else {
-  //       $this.css('display', 'none');
-  //     }
-  // });
-// })
-
-  const subcategoriesContainer = $('.subcategories');
-
-  function createBooksList() {
-    for (const item of subcategoryData) {
-      subcategoriesContainer.append(`
+function createBooksList() {
+  for (const item of subcategoryData) {
+    $('.subcategories').append(`
       <div class="book" data-genre-id="${item.genre}">
         <p>${item.title}</p>
       </div>
     `)
-    }
   }
 
+  for (const book of booksData) {
+    fillDropdown(book, '.book', 'genreId');
+  }
+}
 
-  function createAnimalsList() {
-    for(const animal of Animals) {
-      subcategoriesContainer.append(`
-        <div class="animals" data-species-id="${animal.species}">  
-          <h3>${animal.title}</h3>
-          
-            <img class="animals-image" src="${animal.image}" alt="${animal.alt}">
-          <span class="content">
-            <p>${animal.insight}</p>
-          
-          
-          <span class="look-button">Look here  ></span>
-          </span> 
-        </div> 
-      `)
-    }
+function createAnimalsList() {
+  for (const animal of Animals) {
+    $('.subcategories').append(`
+      <div class="animals" data-species-id="${animal.species}">  
+        <h3>${animal.title}</h3>
+        <img class="animals-image" src="${animal.image}" alt="${animal.alt}"> 
+        <span class="content">
+          <p>${animal.insight}</p>
+          <span class="look-button">Look here  ></span>    
+        </span> 
+      </div> 
+    `);
   }
 
-  const filter = $('#select');
+  for (const species of speciesData) {
+    fillDropdown(species, '.animals', 'speciesId');
+  }
+}
 
-  function createSelectList(list) {
-
-    const $li = $(`
+function fillDropdown(list, selector, identifier) {
+  const $li = $(`
       <li class="select-list" data-value="${list.value}">
          <p>${list.content}</p>
       </li>
   `)
 
-    $li.click(function () {
+  $li.click(() => {
+    for (const div of $(selector)) {
+      // Wrap a plain JS object into jQuery object
+      const $item = $(div);
 
-      for (const div of $('.book')) {
-        // Wrap a plain JS object into jQuery object
-        const $item = $(div);
-
-        // If the select value equals the current item's genre-id OR equals 'all-genres'
-        // then make it visible.
-        if ($item.data('genreId') === $li.data('value') || $li.data('value') === 'all-genres') {
-          $item.css('display', 'block');
-        } else {
-          $item.css('display', 'none');
-        }
+      // If the select value equals the current item's genre-id OR equals 'all-genres'
+      // then make it visible.
+      if ($item.data(identifier) === $li.data('value') || $li.data('value') === 'all') {
+        $item.css('display', 'block');
+      } else {
+        $item.css('display', 'none');
       }
-      $('.choose').text(list.content);
-      filter.css('display', 'none');
-    });
+    }
+    $('.choose').text(list.content);
+  });
 
-    filter.append($li);
-  }
-
-  for (const list of selectData) {
-    createSelectList(list);
-  }
+  $('#select').append($li);
+}

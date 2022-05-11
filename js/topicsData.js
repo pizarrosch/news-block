@@ -97,7 +97,7 @@ const Animals = [
     category: 'Animals',
     title: 'Tiny Yorkie loses leg after venomous snake bite',
     image: 'images/yorkie.jpg',
-    insight: 'Zero, Mo, Tor, Kaya and Jabu, went on a 10-week holiday to Whipsnade from Africa Live in Suffolk.',
+    insight: 'Junior the Yorkshire terrier is in a critical condition after being attacked by an adder on a walk.',
     species: 'dogs',
     alt: 'small dog'
   },
@@ -113,9 +113,11 @@ const Animals = [
   {
     id: 0,
     category: 'Animals',
-    title: 'Lions return to zoo after Storm Eunice damage',
-    image: 'images/Lions.jpg',
-    insight: 'Zero, Mo, Tor, Kaya and Jabu, went on a 10-week holiday to Whipsnade from Africa Live in Suffolk.'
+    title: 'Opinions divided over reintroduction of lynx',
+    image: 'images/lynx.jpg',
+    insight: 'The first detailed social feasibility study into a trial reintroduction of the cat has been held.',
+    species: 'wild-animals',
+    alt: 'lynx'
   },
   {
     id: 0,
@@ -168,3 +170,20 @@ const Animals = [
   },
 
 ]
+
+// console.log(Animals[Math.floor((Animals.length-1)/2)]);
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,5 +1,3 @@
-const $container = $('.news-list');
-
 function createNewsBlock(topic) {
   // Create the topic block
   const $div = $(`
@@ -21,16 +19,18 @@ function createNewsBlock(topic) {
   });
 
   $('.choose').click(() => {
-    filter.toggle();
+    $('#select').toggle();
   })
 }
+
+// Start of the app
+const $container = $('.news-list');
 
 $(window).click((event) => {
   if ($(event.target).is('.choose')) {
     return;
   }
-
-  filter.css('display', 'none');
+  $('#select').css('display', 'none');
 })
 
 for (const topic of topicsData) {
