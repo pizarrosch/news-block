@@ -9,13 +9,15 @@ function createSubcategories(categoryId) {
   }
 }
 
+const subcategories = document.querySelector('.subcategories');
+
 function createBooksList() {
   for (const item of subcategoryData) {
-    $('.subcategories').append(`
+    subcategories.innerHTML += `
       <div class="book" data-genre-id="${item.genre}">
         <p>${item.title}</p>
       </div>
-    `)
+    `
   }
 
   for (const book of booksData) {
@@ -25,7 +27,7 @@ function createBooksList() {
 
 function createAnimalsList() {
   for (const animal of Animals) {
-    $('.subcategories').append(`
+    subcategories.innerHTML += `
       <div class="animals" data-species-id="${animal.species}">  
         <h3>${animal.title}</h3>
         <img class="animals-image" src="${animal.image}" alt="${animal.alt}"> 
@@ -34,7 +36,7 @@ function createAnimalsList() {
           <span class="look-button">Look here  ></span>    
         </span> 
       </div> 
-    `);
+    `;
   }
 
   for (const species of speciesData) {
@@ -43,27 +45,26 @@ function createAnimalsList() {
 }
 
 function fillDropdown(list, selector, identifier) {
-  const $li = $(`
+  const li = `
       <li class="select-list" data-value="${list.value}">
          <p>${list.content}</p>
       </li>
-  `)
+  `;
 
-  $li.click(() => {
-    for (const div of $(selector)) {
-      // Wrap a plain JS object into jQuery object
-      const $item = $(div);
+  li.onclick = () => {
+    for (const div of selector) {
+      const item = div;
 
       // If the select value equals the current item's genre-id OR equals 'all-genres'
       // then make it visible.
-      if ($item.data(identifier) === $li.data('value') || $li.data('value') === 'all') {
-        $item.css('display', 'block');
+      if (item.dataset.identifier === li.dataset.value || li.dataset.value === 'all') {
+        item.style.display = 'block';
       } else {
-        $item.css('display', 'none');
+        item.style.display = 'none';
       }
     }
-    $('.choose').text(list.content);
-  });
+    choose.textContent = list.content;
+  };
 
-  $('#select').append($li);
+  filter.append(li);
 }

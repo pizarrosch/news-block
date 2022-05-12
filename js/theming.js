@@ -6,10 +6,10 @@ function showElement(element) {
   element.css('display', 'block');
 }
 
-const html = $('html');
-const themeButton = $('.theme-button');
-const darkButton = $('.theme-button img:last-child');
-const lightButton = $('.theme-button img:first-child');
+const html = document.querySelector('html');
+const themeButton = document.querySelector('.theme-button');
+const darkButton = document.querySelector('.theme-button img:last-child');
+const lightButton = document.querySelector('.theme-button img:first-child');
 
 themeButton.click(() => {
   html.toggleClass('dark');

@@ -1,39 +1,43 @@
 function createNewsBlock(topic) {
-  // Create the topic block
-  const $div = $(`
+  // Append it to the container
+  container.innerHTML += `
      <div class="newsValue" data-id="${topic.id}">
        <img alt="${topic.image}" src="${topic.image}"/>
        <p>${topic.topic}</p>
      </div>
-  `);
+  `;
 
-  // Append it to the container
-  $container.append($div);
-
+  const divs = document.querySelectorAll('.newsValue');
   // Set event handler for the newly created news block
-  $div.click(() => {
-    // Clean the page
-    $container.css('display', 'none');
-    $('.choose').css('display', 'block');
-    createSubcategories($div.data('id'));
-  });
 
-  $('.choose').click(() => {
-    $('#select').toggle();
-  })
+  for(const div of divs) {
+  div.onclick = () => {
+    // Clean the page
+    container.style.display = 'none';
+    choose.style.display = 'block';
+    createSubcategories(div.dataset.id);
+  };
+  }
+  choose.onclick = () => {
+    filter.classList.toggle('show');
+  }
 }
 
 // Start of the app
-const $container = $('.news-list');
+const container = document.querySelector('.news-list');
 
-$(window).click((event) => {
-  if ($(event.target).is('.choose')) {
+window.onclick = (event) => {
+  if (event.target.classList.contains('.choose')) {
     return;
   }
-  $('#select').css('display', 'none');
-})
+  filter.style.display = 'none';
+}
 
 for (const topic of topicsData) {
   createNewsBlock(topic);
 }
 
+
+
+const choose = document.querySelector('.choose');
+const filter = document.querySelector('#select');
